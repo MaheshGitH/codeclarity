@@ -1,15 +1,19 @@
 import type { Config } from "tailwindcss";
-import fluid, { screens, fontSize } from "fluid-tailwind";
+import fluid, { screens, fontSize, extract } from "fluid-tailwind";
 
 const config: Config = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: { files: ["./src/**/*.{js,ts,jsx,tsx,mdx}"], extract: extract },
 
   theme: {
     extend: {
       fontSize,
       screens: {
-        sml: "20rem",
+        xs: "20rem",
         ...screens,
+      },
+      fontFamily: {
+        inter: "var(--font-inter)",
+        manrope: "var(--font-manrope)",
       },
       colors: {
         bg: "#0B1326",

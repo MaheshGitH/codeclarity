@@ -21,7 +21,7 @@ const CodeBlockContainter = ({ children, getLanguage }: Props) => {
   const [language, setLanguage] = useState<Language>("tsx");
   const [open, setOpen] = useState(false);
   return (
-    <div className="max-w-6xl w-full rounded-2xl overflow-hidden border border-[#464554]/20">
+    <div className="max-w-6xl w-full rounded-2xl overflow-hidden border border-[#464554]/40">
       <div className="flex justify-between items-center bg-[#060E20]/50 py-3 px-4">
         <div className="flex gap-2">
           <span className="block bg-[#ffb4ab]/40 size-3 rounded-full" />

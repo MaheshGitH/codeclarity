@@ -4,6 +4,7 @@ import Record from "./Record";
 import Button from "./Button";
 import { useVoiceRecorder } from "@/hook/useVoiceRecorder";
 import YourExplanation from "./YourExplanation";
+import Feedback from "./Feedback";
 
 type Recorder = {
   isRecording: boolean;
@@ -26,7 +27,10 @@ const MainContent = () => {
         <Record recorder={recorder} />
         <Button recorder={recorder} />
       </div>
-      <YourExplanation recorder={recorder} />
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 mt-20">
+        <YourExplanation recorder={recorder} />
+        <Feedback recorder={recorder} />
+      </div>
     </div>
   );
 };

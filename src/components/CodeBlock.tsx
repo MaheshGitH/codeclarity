@@ -1,7 +1,6 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Clipboard } from "lucide-react";
-import style from "react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark";
 
 interface Props {
   code: string;

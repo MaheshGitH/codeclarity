@@ -1,7 +1,7 @@
 import formatTime from "@/libs/formatTime";
-import { RecordProps } from "./MainContent";
+import { SpeechToTextProps } from "@/hooks/useSpeechToText";
 
-const Record = ({ recorder }: RecordProps) => {
+const Record = ({ recorder }: SpeechToTextProps) => {
   if (!recorder.isRecording && recorder.time == 0) {
     return null;
   } else {

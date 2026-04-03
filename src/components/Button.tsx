@@ -1,7 +1,7 @@
 import { CircleStop, Mic } from "lucide-react";
-import { RecordProps } from "./MainContent";
+import { SpeechToTextProps } from "@/hooks/useSpeechToText";
 
-const Button = ({ recorder }: RecordProps) => {
+const Button = ({ recorder }: SpeechToTextProps) => {
   const handleClick = () => {
     if (recorder.isRecording) {
       recorder.stopRecording();

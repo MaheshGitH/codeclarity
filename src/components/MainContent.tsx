@@ -2,25 +2,13 @@
 
 import Record from "./Record";
 import Button from "./Button";
-import { useVoiceRecorder } from "@/hook/useVoiceRecorder";
 import YourExplanation from "./YourExplanation";
 import Feedback from "./Feedback";
-
-type Recorder = {
-  isRecording: boolean;
-  audioURL: string | null;
-  time: number;
-  transcript: string;
-  startRecording: () => Promise<void>;
-  stopRecording: () => void;
-};
-
-export type RecordProps = {
-  recorder: Recorder;
-};
+import { useSpeechToText } from "@/hooks/useSpeechToText";
 
 const MainContent = () => {
-  const recorder = useVoiceRecorder();
+  const recorder = useSpeechToText();
+
   return (
     <div>
       <div className="flex flex-col items-center gap-8">

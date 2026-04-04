@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "Practice explaining code out loud and get instant feedback on clarity, structure, and speaking pace to improve your technical interview skills.",
   verification: {
-    google: "",
+    google: "N_RRRw2MotI1UYegfbmG6DZUaJX8gHchMS-tr9v0sZ0",
   },
 };
 

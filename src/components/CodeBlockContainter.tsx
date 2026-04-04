@@ -18,7 +18,7 @@ const LANGUAGES = [
 export type Language = (typeof LANGUAGES)[number];
 
 const CodeBlockContainter = ({ children, getLanguage }: Props) => {
-  const [language, setLanguage] = useState<Language>("tsx");
+  const [language, setLanguage] = useState<Language>("java");
   const [open, setOpen] = useState(false);
   return (
     <div className="max-w-6xl w-full rounded-2xl overflow-hidden border border-[#464554]/40">

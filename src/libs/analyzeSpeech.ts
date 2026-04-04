@@ -88,6 +88,7 @@ function calculateWPM(
   wordCount: number,
   durationSeconds: number,
 ): number | null {
+  console.log(wordCount, durationSeconds);
   if (durationSeconds <= 0 || wordCount < 10) return null;
   const minutes = durationSeconds / 60;
   return Math.round(wordCount / minutes);

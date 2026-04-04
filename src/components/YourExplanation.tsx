@@ -16,11 +16,11 @@ const YourExplanation = ({ recorder }: SpeechToTextProps) => {
       </div>
 
       {hasTranscript ? (
-        <p className="text-text ~text-sm/xl">"{recorder.transcript}"</p>
+        <p className="text-text ~text-sm/xl">"{recorder.transcript.trim()}"</p>
       ) : (
         <div className="flex flex-col items-center justify-center gap-3 py-10 text-center">
-          <Mic className="text-secondary size-8" />
-          <p className="text-secondary text-sm">
+          <Mic className="text-secondary ~size-6/8" />
+          <p className="text-secondary ~text-xs/sm">
             Hit record and explain your code as if you're in an interview.
           </p>
         </div>

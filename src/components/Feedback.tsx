@@ -29,7 +29,7 @@ const lengthColor: Record<string, string> = {
 };
 
 const Feedback = ({ recorder }: SpeechToTextProps) => {
-  const feedback = analyzeSpeech(" hello bro mihasdf haf", 60);
+  const feedback = analyzeSpeech(recorder.transcript, recorder.time);
 
   const fillerRegex =
     /\b(um+|uh+|er+|like|you know|basically|literally|actually|so yeah|i mean)\b/gi;
@@ -46,7 +46,7 @@ const Feedback = ({ recorder }: SpeechToTextProps) => {
       </div>
 
       {!hasTranscript ? (
-        <p className="text-secondary text-sm">
+        <p className="text-secondary ~text-xs/sm">
           Record an answer to see your feedback.
         </p>
       ) : (
@@ -72,11 +72,6 @@ const Feedback = ({ recorder }: SpeechToTextProps) => {
                 </span>
               )}
             </p>
-            {feedback.isShortSample && feedback.wpm !== null && (
-              <p className="text-xs text-secondary mt-1">
-                * Under 60s — pace estimate only
-              </p>
-            )}
           </div>
 
           <div>
